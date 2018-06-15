@@ -1,0 +1,326 @@
+@import "bourbon";
+@import "components/vars.scss";
+@import "components/normalize.scss";
+@import "components/fonts.scss";
+
+*:focus::-webkit-input-placeholder {color: transparent}
+*:focus::-moz-placeholder          {color: transparent}
+*:focus:-moz-placeholder           {color: transparent}
+*:focus:-ms-input-placeholder      {color: transparent}
+
+*::-webkit-input-placeholder {
+	color: #000;
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: #000;
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: #000;
+	opacity: 1;
+}
+
+*:-ms-input-placeholder {
+	color: #000;
+	opacity: 1;
+}
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	color: #000;
+}
+body input:required:valid,
+body textarea:required:valid {
+	color: #000;
+}
+*::-webkit-scrollbar-track {
+	background-color: #3a3a3a;
+	transition: all .5s ease;
+}
+*::-webkit-scrollbar {
+	width: .6rem;
+	height: .6rem;
+	background-color: #3a3a3a;
+	transition: all .5s ease;
+}
+*::-webkit-scrollbar-thumb {
+	background-color: $red;
+	transition: all .5s ease;
+}
+body::-webkit-scrollbar {
+	width: 1rem;
+	height: 1rem;
+}
+
+*,
+*:before,
+*:after{
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+}
+body {
+	position: relative;
+	min-width: 320px;
+	margin: 0;
+	padding: 0;
+	font-size: 2.4rem;
+	line-height: 1.25;
+	font-weight: 400;
+	font-family: 'Mariupol', sans-serif;
+	color: #000;
+	background-color: #fff;
+	-moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	scroll-behavior: smooth;
+	// &:before, &:after {
+	// 	content: '';
+	// 	position: fixed;
+	// 	z-index: 1000;
+	// 	top: 8rem;
+	// 	bottom: 8rem;
+	// 	width: 4px;
+	// 	background-color: $red;
+	// 	transition: all .5s ease;
+	// }
+	// &:before {
+	// 	left: 8rem;
+	// }
+	// &:after {
+	// 	right: 8rem;
+	// }
+	// &[data-color="light"] {
+	//
+	// 	&:before, &:after {
+	// 		background-color: #000;
+	// 	}
+	// }
+}
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.hidden {
+	display: none;
+}
+a {
+	outline: none;
+	color: $red;
+}
+// .section {
+//
+// 	background-size: cover;
+// 	background-position: center center;
+// 	background-repeat: no-repeat;
+//
+// 	display: flex;
+// 	&[data-color="dark"] {
+// 		background-color: #3e3a38;
+// 	}
+// }
+// .wrapper {
+// 	flex: 0 0 auto;
+// 	width: 100%;
+// 	padding: 8rem;
+//
+// 	display: flex;
+// }
+// .inner {
+// 	flex: 0 0 auto;
+//     width: 100%;
+// 	padding: 4rem 6%;
+//
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//
+// 	>* {
+// 		flex: 0 0 auto;
+// 	}
+// }
+.container {
+	max-width: 1300px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+.title {
+	margin: 0;
+	line-height: 1;
+	word-wrap: break-word;
+	strong {
+		color: $red;
+	}
+}
+h2.title {
+	font-size: 4.5rem;
+	&:after {
+		content: ':';
+		color: $red;
+	}
+}
+// h3.title {
+// 	font-size: 3.5rem;
+// }
+// h4.title {
+// 	font-size: 2.5rem;
+// }
+// h5.title {
+// 	font-size: 1.8rem;
+// }
+.button {
+	@include btn;
+	position: relative;
+	padding: 2rem 4rem;
+	// box-shadow: inset 0 0 0 3px $beige;
+	color: #fff;
+	font-size: 1.8rem;
+	font-family: inherit;
+	background-color: $red;
+	transition: all .5s ease;
+	// &:before {
+	// 	content: '';
+	// 	position: absolute;
+	// 	top: 0;
+	// 	right: 3px;
+	// 	bottom: 0;
+	// 	width: 0;
+	// 	transform: translateX(100%);
+	// 	box-shadow: inset 0 0 0 3px $beige;
+	// 	transition: all .5s ease;
+	// }
+	// &:after {
+	// 	content: '';
+	// 	position: absolute;
+	// 	right: 5px;
+	// 	top: 50%;
+	// 	transform: translateY(-50%) rotate(-45deg);
+	// 	width: 2.2rem;
+	// 	height: .8rem;
+	// 	border-left: 2px solid $red;
+	// 	border-bottom: 2px solid $red;
+	// 	opacity: 0;
+	// 	transition: all .5s ease;
+	// }
+	&:hover, &:active {
+		background-color: darken($red, 20%);
+		// margin-right: 6rem;
+		// &:before {
+		// 	width: 6.6rem;
+		// }
+		// &:after {
+		// 	right: -4rem;
+		// 	opacity: 1;
+		// }
+	}
+}
+.link {
+	@include btn;
+	font-size: 1.8rem;
+	font-weight: 500;
+	color: #000;
+	border-bottom: 2px dotted $red;
+    transition: all .5s ease;
+    &:hover, &:active {
+        color: $red;
+    }
+}
+@media only screen and (max-width : 1600px) {
+
+}
+@media only screen and (max-width : 1300px) {
+	html {
+		font-size: 9px;
+	}
+
+}
+
+@media only screen and (max-width : 1200px) {
+	html {
+		font-size: 8.5px;
+	}
+	// body {
+	// 	&:before, &:after {
+	// 		display: none;
+	// 	}
+	// }
+	// .wrapper {
+	// 	padding: 0;
+	// }
+	// .inner {
+	// 	padding: 8rem 5%;
+	// }
+}
+
+@media only screen and (max-width : 960px) {
+	html {
+		font-size: 8px;
+	}
+	// html {
+	// 	font-size: 9px;
+	// }
+}
+
+@media only screen and (max-width : 768px) {
+	html {
+		font-size: 7.5px;
+	}
+	// .wrapper {
+	// 	display: block;
+	// }
+}
+
+@media only screen and (max-width : 640px) {
+	html {
+		font-size: 7px;
+	}
+}
+
+@media only screen and (max-width : 480px) {
+	h2.title {
+		font-size: 4rem;
+	}
+}
+
+@media only screen and (max-width : 360px) {
+
+}
+
+
+//Custom Styles Here
+@import "components/header.scss";
+@import "components/menu.scss";
+// @import "components/home.scss";
+@import "components/about.scss";
+@import "components/stages.scss";
+@import "components/nominations.scss";
+@import "components/jury.scss";
+
+// @import "components/profit.scss";
+// @import "components/participants.scss";
+// @import "components/themes.scss";
+// @import "components/speakers.scss";
+// @import "components/price.scss";
+// @import "components/program.scss";
+// @import "components/place.scss";
+// @import "components/parthners.scss";
+// @import "components/organizers.scss";
+// @import "components/direction.scss";
+// @import "components/footer.scss";
+
+@import "build/scss/components/magnific-popup.scss";
+
+//ALWAYS END
+// @import "components/media.scss";
+
+//Load Libs SASS
+// @import "html/libs/animate/animate.sass";
+// @import "html/libs/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min";
+//@import "html/libs/superfish/dist/css/superfish";
+//@import "html/libs/font-awesome/scss/font-awesome.scss";
+//@import "html/libs/jQuery.mmenu/dist/css/jquery.mmenu.all";
+@import "html/libs/magnific-popup/dist/magnific-popup";

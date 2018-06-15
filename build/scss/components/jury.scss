@@ -1,0 +1,127 @@
+.jury {
+    padding: 10rem 0;
+    overflow-x: hidden;
+}
+.jury__box {
+    margin: 4rem -2rem 0 -2rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.jury__item {
+    flex: 0 0 auto;
+    width: calc(33.3333% - 4rem);
+    margin: 4rem 2rem 0 2rem;
+
+    display: flex;
+}
+.jury__item-img {
+    margin: 0;
+    flex: 0 0 auto;
+    width: 42%;
+    img {
+        display: inline-block;
+        vertical-align: baseline;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        border-radius: 50%;
+    }
+}
+.jury__item-content {
+    flex: 0 0 auto;
+    width: 52%;
+    margin: 0 0 0 6%;
+}
+.jury__item-title {
+    margin: 0;
+    font-size: 2.4rem;
+}
+.jury__item-text {
+    margin: 1rem 0 0 0;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.jury__item-link {
+    margin: 2rem 0 0 0;
+    font-size: 1.8rem;
+    font-weight: 500;
+    a {
+        display: inline-block;
+        vertical-align: baseline;
+        padding-right: 2rem;
+        text-decoration: none;
+        color: inherit;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: .8rem;
+            width: .8rem;
+            height: .8rem;
+            border-top: 1px solid $red;
+            border-right: 1px solid $red;
+            transform: rotate(45deg);
+        }
+    }
+    transition: all .5s ease;
+    &:hover, &:active {
+        color: $red;
+    }
+}
+.jury__item-hide {
+    display: none;
+}
+
+.jury__popup {
+    background-color: #fff;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+}
+.jury__popup-img {
+    align-self: flex-end;
+    flex: 0 0 auto;
+    margin: 0;
+    width: 32%;
+    img {
+        display: inline-block;
+        vertical-align: top;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+.jury__popup-content {
+    align-self: center;
+    flex: 0 0 auto;
+    width: 68%;
+    padding: 5rem 4%;
+}
+.jury__popup-title {
+    margin: 0;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+}
+.jury__popup-subtitle {
+    margin: 2rem 0 0 0;
+    color: #4d5178;
+}
+.jury__popup-text {
+    margin: 4rem 0 0 0;
+    font-size: 2rem;
+}
+@media only screen and (max-width : 768px) {
+    .jury__popup {
+        display: block;
+    }
+    .jury__popup-img {
+        width: auto;
+        text-align: center;
+    }
+    .jury__popup-content {
+        width: auto;
+    }
+}
