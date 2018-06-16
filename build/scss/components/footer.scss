@@ -1,0 +1,148 @@
+.footer {
+    padding: 1rem 0;
+    color: #fff;
+    background-color: #000;
+}
+.footer__box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer__left {
+    order: 1;
+    flex: 0 1 auto;
+    margin: 2rem 2rem 2rem 0;
+}
+.footer__social {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    font-size: 1.6rem;
+
+    li {
+        a {
+            text-decoration: none;
+            color: $red;
+            transition: all .5s ease;
+            &:hover, &:active {
+                color: darken($red, 20%);
+            }
+        }
+    }
+}
+.footer__politics {
+    margin: 1rem 0 0 0;
+    font-size: 1.6rem;
+    font-weight: 400;
+    a {
+        text-decoration: none;
+        color: inherit;
+        transition: all .5s ease;
+        &:hover, &:active {
+            color: $red;
+        }
+    }
+}
+.footer__logo {
+    order: 2;
+    flex: 0 1 auto;
+    margin: 2rem;
+    img {
+        display: inline-block;
+        vertical-align: top;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+.footer__callback {
+    order: 3;
+    flex: 0 1 auto;
+    position: relative;
+    margin: 2rem 0 2rem 2rem;
+    // right: 0;
+    // top: 50%;
+    // transform: translateY(-50%);
+
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: .05em;
+    // text-align: right;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.footer__callback-link {
+    flex: 0 1 auto;
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+    color: inherit;
+    transition: all .5s ease;
+    &:hover, &:active {
+        color: $red;
+    }
+}
+.footer__callback-button {
+    flex: 0 1 auto;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0 0 2rem;
+    color: $red;
+    text-decoration: none;
+    border-bottom: 1px dotted currentColor;
+    transition: all .5s ease;
+    &:hover, &:active {
+        color: darken($red, 20%);
+    }
+}
+
+
+@media only screen and (max-width : 1300px) {
+
+}
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 960px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .footer__box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer__logo {
+        order: initial;
+        margin: 2rem 0;
+    }
+    .footer__callback {
+        order: initial;
+        text-align: inherit;
+        margin: 2rem 0;
+    }
+    .footer__left {
+        order: initial;
+        margin: 2rem 0;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
+}

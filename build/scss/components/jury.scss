@@ -3,7 +3,7 @@
     overflow-x: hidden;
 }
 .jury__box {
-    margin: 4rem -2rem 0 -2rem;
+    margin: 0 -2rem;
 
     display: flex;
     flex-wrap: wrap;
@@ -12,7 +12,7 @@
 .jury__item {
     flex: 0 0 auto;
     width: calc(33.3333% - 4rem);
-    margin: 4rem 2rem 0 2rem;
+    margin: 8rem 2rem 0 2rem;
 
     display: flex;
 }
@@ -26,7 +26,6 @@
         max-width: 100%;
         width: auto;
         height: auto;
-        border-radius: 50%;
     }
 }
 .jury__item-content {
@@ -77,15 +76,15 @@
 
 .jury__popup {
     background-color: #fff;
-    max-width: 1300px;
+    max-width: 1270px;
     margin: 0 auto;
+    padding: 7rem 4%;
     display: flex;
 }
 .jury__popup-img {
-    align-self: flex-end;
     flex: 0 0 auto;
     margin: 0;
-    width: 32%;
+    width: 15%;
     img {
         display: inline-block;
         vertical-align: top;
@@ -97,25 +96,57 @@
 .jury__popup-content {
     align-self: center;
     flex: 0 0 auto;
-    width: 68%;
-    padding: 5rem 4%;
+    width: 80%;
+    margin:  0 0 0 5%;
 }
 .jury__popup-title {
     margin: 0;
     font-size: 2.4rem;
-    text-transform: uppercase;
+    // text-transform: uppercase;
 }
 .jury__popup-subtitle {
     margin: 2rem 0 0 0;
-    color: #4d5178;
+    // color: #4d5178;
+    font-size: 1.8rem;
 }
 .jury__popup-text {
     margin: 4rem 0 0 0;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
+
+@media only screen and (max-width : 1300px) {
+
+}
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 960px) {
+    .jury__title {
+        text-align: center;
+    }
+    .jury__item {
+        //width: calc(50% - 4rem);
+        //margin: 4rem 2rem 0 2rem;
+        display: block;
+        text-align: center;
+    }
+    .jury__item-img {
+        width: auto;
+    }
+    .jury__item-content {
+        width: auto;
+        margin: 3rem 0 0 0;
+    }
+}
+
+
+
 @media only screen and (max-width : 768px) {
     .jury__popup {
         display: block;
+        padding: 7rem 5%;
     }
     .jury__popup-img {
         width: auto;
@@ -123,5 +154,28 @@
     }
     .jury__popup-content {
         width: auto;
+        margin: 4rem 0 0 0;
     }
+}
+
+
+@media only screen and (max-width : 640px) {
+    .jury__item {
+        width: calc(50% - 4rem);
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .jury__box {
+        display: block;
+        margin: 8rem 0 0 0;
+    }
+    .jury__item {
+        width: auto;
+        margin: 8rem 0 0 0;
+    }
+}
+
+@media only screen and (max-width : 360px) {
+
 }

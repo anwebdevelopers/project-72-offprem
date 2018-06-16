@@ -3,6 +3,16 @@
     background-size: contain;
     background-position: 100% 100%;
     background-repeat: no-repeat;
+    &.header_questionnaire {
+        background-position: 0% 0%, 100% 100%;
+        .header__top {
+            justify-content: center;
+        }
+        .header__content {
+            width: 100%;
+            text-align: center;
+        }
+    }
 }
 .header__top {
 
@@ -303,6 +313,9 @@
         padding: 0;
         margin: 7rem 0 0 0;
         text-align: center;
+    }
+    .header.header_questionnaire .header__content {
+        padding: 0 0 7rem 0;
     }
     .header__img {
         width: auto;
